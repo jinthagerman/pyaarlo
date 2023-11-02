@@ -471,6 +471,11 @@ class ArloVideo(ArloMediaObject):
         """Returns the URL of the video."""
         return self._attrs.get("presignedContentUrl", None)
 
+    @property
+    def reason(self):
+        """Returns the reason for video recording."""
+        return self._attrs.get("reason", None)
+
     def download_video(self, filename=None):
         video_url = self.video_url
 
